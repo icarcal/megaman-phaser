@@ -1,0 +1,29 @@
+{
+  "name": "phaser-megaman",
+  "version": "0.1.0",
+  "description": "A megaman inspired game made with phaser.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "phaser-scripts start",
+    "build": "phaser-scripts build",
+    "eject": "phaser-scripts eject"
+  },
+  "dependencies": {
+    "phaser": "^3.8.0"
+  },
+  "devDependencies": {
+    "@phaser-cli/scripts": "^1.0.6"
+  },
+  "keywords": [
+    "megaman",
+    "phaser.io",
+    "phaser",
+    "game"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/icarcal/megaman-phaser"
+  },
+  "author": "Icaro Caldeira Carreira <icaro.caldeira@hotmail.com> (https://icarcal.github.io)",
+  "license": "MIT"
+}

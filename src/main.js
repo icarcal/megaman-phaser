@@ -5,13 +5,13 @@ import PlayScene from './scenes/PlayScene'
 const config = {
   type: Phaser.AUTO,
   parent: 'app',
-  width: 800,
-  height: 600,
+  width: window.innerWidth,
+  height: window.innerHeight,
   physics: {
     default: 'arcade',
     arcade: {
       gravity: { y: 1000 },
-      debug: false
+      debug: true
     },
   },
   scene: [BootScene, PlayScene]

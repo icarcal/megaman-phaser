@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.7.0</string>
         <key>fileName</key>
-        <string>/Users/Iki/Downloads/phaser_tutorial_02/megaman.tps</string>
+        <string>/Users/Iki/Desktop/githubfiles/phaser3-megaman/sprites/megaman.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -183,7 +183,20 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">assets/megaman-init/megaman-init-1.png</key>
+            <key type="filename">megaman-dash/megaman-dash.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>38,26,76,52</rect>
+                <key>scale9Paddings</key>
+                <rect>38,26,76,52</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-init/megaman-init-1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -196,7 +209,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-init/megaman-init-2.png</key>
+            <key type="filename">megaman-init/megaman-init-2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -209,8 +222,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-init/megaman-init-3.png</key>
-            <key type="filename">assets/megaman-init/megaman-init-4.png</key>
+            <key type="filename">megaman-init/megaman-init-3.png</key>
+            <key type="filename">megaman-init/megaman-init-4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -223,8 +236,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-init/megaman-init-5.png</key>
-            <key type="filename">assets/megaman-walk/megaman-idle.png</key>
+            <key type="filename">megaman-init/megaman-init-5.png</key>
+            <key type="filename">megaman-walk/megaman-idle.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -237,7 +250,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-jump/megaman-jump-down.png</key>
+            <key type="filename">megaman-jump/megaman-jump-down.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -250,7 +263,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-jump/megaman-jump-up.png</key>
+            <key type="filename">megaman-jump/megaman-jump-up.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -263,7 +276,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-1.png</key>
+            <key type="filename">megaman-walk/megaman-walk-1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -276,7 +289,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-2.png</key>
+            <key type="filename">megaman-walk/megaman-walk-2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -289,7 +302,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-3.png</key>
+            <key type="filename">megaman-walk/megaman-walk-3.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -302,7 +315,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-4.png</key>
+            <key type="filename">megaman-walk/megaman-walk-4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -315,7 +328,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-5.png</key>
+            <key type="filename">megaman-walk/megaman-walk-5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -328,7 +341,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-6.png</key>
+            <key type="filename">megaman-walk/megaman-walk-6.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -341,7 +354,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets/megaman-walk/megaman-walk-7.png</key>
+            <key type="filename">megaman-walk/megaman-walk-7.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -357,9 +370,10 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>assets/megaman-init</filename>
-            <filename>assets/megaman-jump</filename>
-            <filename>assets/megaman-walk</filename>
+            <filename>megaman-dash</filename>
+            <filename>megaman-init</filename>
+            <filename>megaman-jump</filename>
+            <filename>megaman-walk</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

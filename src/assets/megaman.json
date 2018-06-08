@@ -1,140 +1,220 @@
-{"frames": [
+{"frames": {
 
+"megaman-dash/megaman-dash-shooting":
 {
-	"filename": "megaman-dash/megaman-dash",
-	"frame": {"x":0,"y":0,"w":152,"h":104},
+	"frame": {"x":0,"y":0,"w":192,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":104},
+	"sourceSize": {"w":192,"h":104}
+},
+"megaman-dash/megaman-dash":
+{
+	"frame": {"x":192,"y":0,"w":152,"h":104},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":104},
 	"sourceSize": {"w":152,"h":104}
 },
+"megaman-init/megaman-init-1":
 {
-	"filename": "megaman-init/megaman-init-1",
-	"frame": {"x":182,"y":925,"w":32,"h":192},
+	"frame": {"x":413,"y":793,"w":32,"h":192},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":192},
 	"sourceSize": {"w":32,"h":192}
 },
+"megaman-init/megaman-init-2":
 {
-	"filename": "megaman-init/megaman-init-2",
-	"frame": {"x":152,"y":0,"w":88,"h":113},
+	"frame": {"x":344,"y":0,"w":88,"h":113},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":113},
 	"sourceSize": {"w":88,"h":113}
 },
+"megaman-init/megaman-init-3":
 {
-	"filename": "megaman-init/megaman-init-3",
 	"frame": {"x":118,"y":113,"w":118,"h":128},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":128},
 	"sourceSize": {"w":118,"h":128}
 },
+"megaman-init/megaman-init-4":
 {
-	"filename": "megaman-init/megaman-init-4",
 	"frame": {"x":0,"y":113,"w":118,"h":128},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":128},
 	"sourceSize": {"w":118,"h":128}
 },
+"megaman-init/megaman-init-5":
 {
-	"filename": "megaman-init/megaman-init-5",
-	"frame": {"x":118,"y":785,"w":119,"h":140},
+	"frame": {"x":321,"y":653,"w":119,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":140},
 	"sourceSize": {"w":119,"h":140}
 },
+"megaman-jump/megaman-jump-down-shooting":
 {
-	"filename": "megaman-jump/megaman-jump-down",
-	"frame": {"x":0,"y":925,"w":108,"h":168},
+	"frame": {"x":108,"y":793,"w":124,"h":168},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":168},
+	"sourceSize": {"w":124,"h":168}
+},
+"megaman-jump/megaman-jump-down":
+{
+	"frame": {"x":0,"y":793,"w":108,"h":168},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":108,"h":168},
 	"sourceSize": {"w":108,"h":168}
 },
+"megaman-jump/megaman-jump-up-shooting":
 {
-	"filename": "megaman-jump/megaman-jump-up",
-	"frame": {"x":108,"y":925,"w":74,"h":184},
+	"frame": {"x":306,"y":793,"w":107,"h":184},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":184},
+	"sourceSize": {"w":107,"h":184}
+},
+"megaman-jump/megaman-jump-up":
+{
+	"frame": {"x":232,"y":793,"w":74,"h":184},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":184},
 	"sourceSize": {"w":74,"h":184}
 },
+"megaman-shooting/megaman-shooting-1":
 {
-	"filename": "megaman-walk/megaman-idle",
-	"frame": {"x":0,"y":785,"w":118,"h":140},
+	"frame": {"x":0,"y":513,"w":115,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":136},
+	"sourceSize": {"w":115,"h":136}
+},
+"megaman-shooting/megaman-shooting-2":
+{
+	"frame": {"x":349,"y":513,"w":128,"h":140},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":140},
+	"sourceSize": {"w":128,"h":140}
+},
+"megaman-shooting/megaman-shooting-3":
+{
+	"frame": {"x":283,"y":245,"w":150,"h":132},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":132},
+	"sourceSize": {"w":150,"h":132}
+},
+"megaman-shooting/megaman-shooting-4":
+{
+	"frame": {"x":120,"y":377,"w":124,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":136},
+	"sourceSize": {"w":124,"h":136}
+},
+"megaman-shooting/megaman-shooting-5":
+{
+	"frame": {"x":92,"y":653,"w":132,"h":140},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":140},
+	"sourceSize": {"w":132,"h":140}
+},
+"megaman-shooting/megaman-shooting-6":
+{
+	"frame": {"x":0,"y":245,"w":148,"h":132},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":132},
+	"sourceSize": {"w":148,"h":132}
+},
+"megaman-shooting/megaman-shooting-idle":
+{
+	"frame": {"x":115,"y":513,"w":116,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":116,"h":136},
+	"sourceSize": {"w":116,"h":136}
+},
+"megaman-walk/megaman-idle":
+{
+	"frame": {"x":231,"y":513,"w":118,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":140},
 	"sourceSize": {"w":118,"h":140}
 },
+"megaman-walk/megaman-walk-1":
 {
-	"filename": "megaman-walk/megaman-walk-1",
-	"frame": {"x":80,"y":509,"w":120,"h":136},
+	"frame": {"x":0,"y":377,"w":120,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":136},
 	"sourceSize": {"w":120,"h":136}
 },
+"megaman-walk/megaman-walk-2":
 {
-	"filename": "megaman-walk/megaman-walk-2",
-	"frame": {"x":0,"y":509,"w":80,"h":136},
+	"frame": {"x":332,"y":377,"w":80,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":136},
 	"sourceSize": {"w":80,"h":136}
 },
+"megaman-walk/megaman-walk-3":
 {
-	"filename": "megaman-walk/megaman-walk-3",
-	"frame": {"x":97,"y":645,"w":92,"h":140},
+	"frame": {"x":0,"y":653,"w":92,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":140},
 	"sourceSize": {"w":92,"h":140}
 },
+"megaman-walk/megaman-walk-4":
 {
-	"filename": "megaman-walk/megaman-walk-4",
-	"frame": {"x":0,"y":241,"w":132,"h":132},
+	"frame": {"x":236,"y":113,"w":132,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":132},
 	"sourceSize": {"w":132,"h":132}
 },
+"megaman-walk/megaman-walk-5":
 {
-	"filename": "megaman-walk/megaman-walk-5",
-	"frame": {"x":135,"y":373,"w":88,"h":136},
+	"frame": {"x":244,"y":377,"w":88,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":136},
 	"sourceSize": {"w":88,"h":136}
 },
+"megaman-walk/megaman-walk-6":
 {
-	"filename": "megaman-walk/megaman-walk-6",
-	"frame": {"x":0,"y":645,"w":97,"h":140},
+	"frame": {"x":224,"y":653,"w":97,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":140},
 	"sourceSize": {"w":97,"h":140}
 },
+"megaman-walk/megaman-walk-7":
 {
-	"filename": "megaman-walk/megaman-walk-7",
-	"frame": {"x":0,"y":373,"w":135,"h":132},
+	"frame": {"x":148,"y":245,"w":135,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":135,"h":132},
 	"sourceSize": {"w":135,"h":132}
-}],
+}},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "megaman",
 	"format": "RGBA8888",
-	"size": {"w":240,"h":1117},
+	"size": {"w":477,"h":985},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:a689ad56f0cd184ba8a8632445b8a58e:87ea24eee130f5740de0479854ad6d0a:fd24840a6b550dffb098fa645ec31f13$"
+	"smartupdate": "$TexturePacker:SmartUpdate:1de850784065a213e3ed8e58e61e5a6a:1490b9675bb4922efe2fb4afbab077d7:fd24840a6b550dffb098fa645ec31f13$"
 }
 }

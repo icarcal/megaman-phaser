@@ -28,13 +28,13 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <false/>
+        <true/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
         <uint>72</uint>
         <key>dataFormat</key>
-        <string>phaser-json-array</string>
+        <string>phaser</string>
         <key>textureFileName</key>
         <filename></filename>
         <key>flipPVR</key>
@@ -104,7 +104,7 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
@@ -131,7 +131,7 @@
         </struct>
         <key>dataFileNames</key>
         <map type="GFileNameMap">
-            <key>data</key>
+            <key>json</key>
             <struct type="DataFile">
                 <key>name</key>
                 <filename>assets/megaman.json</filename>
@@ -153,7 +153,7 @@
         <key>autoAliasEnabled</key>
         <false/>
         <key>trimSpriteNames</key>
-        <true/>
+        <false/>
         <key>prependSmartFolderName</key>
         <true/>
         <key>autodetectAnimations</key>
@@ -165,7 +165,7 @@
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
-            <uint>0</uint>
+            <uint>1</uint>
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMargin</key>
@@ -183,6 +183,19 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">megaman-dash/megaman-dash-shooting.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>48,26,96,52</rect>
+                <key>scale9Paddings</key>
+                <rect>48,26,96,52</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">megaman-dash/megaman-dash.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -250,6 +263,19 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">megaman-jump/megaman-jump-down-shooting.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>31,42,62,84</rect>
+                <key>scale9Paddings</key>
+                <rect>31,42,62,84</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">megaman-jump/megaman-jump-down.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -263,6 +289,19 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">megaman-jump/megaman-jump-up-shooting.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,46,53,92</rect>
+                <key>scale9Paddings</key>
+                <rect>27,46,53,92</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">megaman-jump/megaman-jump-up.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -273,6 +312,97 @@
                 <rect>19,46,37,92</rect>
                 <key>scale9Paddings</key>
                 <rect>19,46,37,92</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-1.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>29,34,57,68</rect>
+                <key>scale9Paddings</key>
+                <rect>29,34,57,68</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,35,64,70</rect>
+                <key>scale9Paddings</key>
+                <rect>32,35,64,70</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>38,33,75,66</rect>
+                <key>scale9Paddings</key>
+                <rect>38,33,75,66</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>31,34,62,68</rect>
+                <key>scale9Paddings</key>
+                <rect>31,34,62,68</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-5.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,35,66,70</rect>
+                <key>scale9Paddings</key>
+                <rect>33,35,66,70</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>37,33,74,66</rect>
+                <key>scale9Paddings</key>
+                <rect>37,33,74,66</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-shooting/megaman-shooting-idle.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>29,34,58,68</rect>
+                <key>scale9Paddings</key>
+                <rect>29,34,58,68</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -374,13 +504,16 @@
             <filename>megaman-init</filename>
             <filename>megaman-jump</filename>
             <filename>megaman-walk</filename>
+            <filename>megaman-shooting</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
         <key>replaceList</key>
         <array/>
         <key>ignoredWarnings</key>
-        <array/>
+        <array>
+            <string>phaser3-exporter-beta</string>
+        </array>
         <key>commonDivisorX</key>
         <uint>1</uint>
         <key>commonDivisorY</key>

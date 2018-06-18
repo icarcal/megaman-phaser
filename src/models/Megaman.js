@@ -1,7 +1,7 @@
 import megamanJson from '../assets/megaman.json';
 import megamanPng from '../assets/megaman.png';
 
-export const NORMAL_VELOCITY = 300;
+export const NORMAL_VELOCITY = 250;
 export const DASH_VELOCITY = 800;
 export const JUMP_VELOCITY = 900;
 
@@ -38,7 +38,7 @@ export default class Megaman {
       100,
       0,
       'megaman',
-      'megaman-init/megaman-init-1',
+      'megaman-init/megaman-init-1.png',
     );
     this.generateAnimations();
     this.generateControls();
@@ -57,10 +57,11 @@ export default class Megaman {
       frames: [
         ...this.scene.anims.generateFrameNames('megaman', {
           prefix: 'megaman-init/megaman-init-',
+          suffix: '.png',
           start: 1,
           end: 5,
         }),
-        { key: 'megaman', frame: 'megaman-walk/megaman-idle' },
+        { key: 'megaman', frame: 'megaman-walk/chaac-walk-1.png' },
       ],
       frameRate: 15,
       repeat: 0,
@@ -69,7 +70,8 @@ export default class Megaman {
     this.scene.anims.create({
       key: 'megaman-walk',
       frames: this.scene.anims.generateFrameNames('megaman', {
-        prefix: 'megaman-walk/megaman-walk-',
+        prefix: 'megaman-walk/chaac-walk-',
+        suffix: '.png',
         start: 1,
         end: 7,
       }),
@@ -79,42 +81,42 @@ export default class Megaman {
 
     this.scene.anims.create({
       key: 'megaman-idle',
-      frames: [{ key: 'megaman', frame: 'megaman-walk/megaman-idle' }],
+      frames: [{ key: 'megaman', frame: 'megaman-walk/chaac-walk-1.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
     this.scene.anims.create({
       key: 'megaman-jump-up',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up' }],
+      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
     this.scene.anims.create({
       key: 'megaman-jump-up-blaster',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up-shooting' }],
+      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up-shooting.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
     this.scene.anims.create({
       key: 'megaman-jump-down',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down' }],
+      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
     this.scene.anims.create({
       key: 'megaman-jump-down-blaster',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down-shooting' }],
+      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down-shooting.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
     this.scene.anims.create({
       key: 'megaman-dash',
-      frames: [{ key: 'megaman', frame: 'megaman-dash/megaman-dash' }],
+      frames: [{ key: 'megaman', frame: 'megaman-dash/megaman-dash.png' }],
       frameRate: 10,
       repeat: 0,
     });
@@ -122,7 +124,7 @@ export default class Megaman {
     this.scene.anims.create({
       key: 'megaman-blaster-idle',
       frames: [
-        { key: 'megaman', frame: 'megaman-shooting/megaman-shooting-idle' },
+        { key: 'megaman', frame: 'megaman-shooting/megaman-shooting-idle.png' },
       ],
       frameRate: 10,
       repeat: 0,
@@ -132,6 +134,7 @@ export default class Megaman {
       key: 'megaman-walk-blaster',
       frames: this.scene.anims.generateFrameNames('megaman', {
         prefix: 'megaman-shooting/megaman-shooting-',
+        suffix: '.png',
         start: 1,
         end: 6,
       }),

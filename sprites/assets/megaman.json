@@ -1,8 +1,88 @@
 {"frames": {
 
+"megaman-charge/charge-1.png":
+{
+	"frame": {"x":479,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-2.png":
+{
+	"frame": {"x":766,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-3.png":
+{
+	"frame": {"x":862,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-4.png":
+{
+	"frame": {"x":670,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-5.png":
+{
+	"frame": {"x":0,"y":0,"w":95,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":95,"h":96},
+	"sourceSize": {"w":95,"h":96}
+},
+"megaman-charge/charge-6.png":
+{
+	"frame": {"x":95,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-7.png":
+{
+	"frame": {"x":287,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-8.png":
+{
+	"frame": {"x":191,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-9.png":
+{
+	"frame": {"x":383,"y":0,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+},
+"megaman-charge/charge-10.png":
+{
+	"frame": {"x":575,"y":0,"w":95,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":95,"h":96},
+	"sourceSize": {"w":95,"h":96}
+},
 "megaman-dash/megaman-dash-shooting.png":
 {
-	"frame": {"x":0,"y":0,"w":192,"h":104},
+	"frame": {"x":0,"y":96,"w":192,"h":104},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":104},
@@ -10,7 +90,7 @@
 },
 "megaman-dash/megaman-dash.png":
 {
-	"frame": {"x":192,"y":0,"w":152,"h":104},
+	"frame": {"x":192,"y":96,"w":152,"h":104},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":104},
@@ -18,7 +98,7 @@
 },
 "megaman-init/megaman-init-1.png":
 {
-	"frame": {"x":912,"y":418,"w":32,"h":192},
+	"frame": {"x":912,"y":514,"w":32,"h":192},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":192},
@@ -26,7 +106,7 @@
 },
 "megaman-init/megaman-init-2.png":
 {
-	"frame": {"x":344,"y":0,"w":88,"h":113},
+	"frame": {"x":344,"y":96,"w":88,"h":113},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":113},
@@ -34,7 +114,7 @@
 },
 "megaman-init/megaman-init-3.png":
 {
-	"frame": {"x":550,"y":0,"w":118,"h":128},
+	"frame": {"x":550,"y":96,"w":118,"h":128},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":128},
@@ -42,7 +122,7 @@
 },
 "megaman-init/megaman-init-4.png":
 {
-	"frame": {"x":432,"y":0,"w":118,"h":128},
+	"frame": {"x":432,"y":96,"w":118,"h":128},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":128},
@@ -50,7 +130,7 @@
 },
 "megaman-init/megaman-init-5.png":
 {
-	"frame": {"x":250,"y":268,"w":119,"h":140},
+	"frame": {"x":250,"y":364,"w":119,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":140},
@@ -58,7 +138,7 @@
 },
 "megaman-jump/megaman-jump-down-shooting.png":
 {
-	"frame": {"x":607,"y":418,"w":124,"h":168},
+	"frame": {"x":607,"y":514,"w":124,"h":168},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":168},
@@ -66,7 +146,7 @@
 },
 "megaman-jump/megaman-jump-down.png":
 {
-	"frame": {"x":499,"y":418,"w":108,"h":168},
+	"frame": {"x":499,"y":514,"w":108,"h":168},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":108,"h":168},
@@ -74,7 +154,7 @@
 },
 "megaman-jump/megaman-jump-up-shooting.png":
 {
-	"frame": {"x":805,"y":418,"w":107,"h":184},
+	"frame": {"x":805,"y":514,"w":107,"h":184},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":184},
@@ -82,7 +162,7 @@
 },
 "megaman-jump/megaman-jump-up.png":
 {
-	"frame": {"x":731,"y":418,"w":74,"h":184},
+	"frame": {"x":731,"y":514,"w":74,"h":184},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":184},
@@ -90,7 +170,7 @@
 },
 "megaman-shooting/megaman-shooting-1.png":
 {
-	"frame": {"x":746,"y":132,"w":115,"h":136},
+	"frame": {"x":715,"y":228,"w":115,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":136},
@@ -98,7 +178,7 @@
 },
 "megaman-shooting/megaman-shooting-2.png":
 {
-	"frame": {"x":558,"y":268,"w":128,"h":140},
+	"frame": {"x":558,"y":364,"w":128,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":140},
@@ -106,7 +186,7 @@
 },
 "megaman-shooting/megaman-shooting-3.png":
 {
-	"frame": {"x":0,"y":132,"w":150,"h":132},
+	"frame": {"x":816,"y":96,"w":150,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":132},
@@ -114,7 +194,7 @@
 },
 "megaman-shooting/megaman-shooting-4.png":
 {
-	"frame": {"x":298,"y":132,"w":124,"h":136},
+	"frame": {"x":267,"y":228,"w":124,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":136},
@@ -122,7 +202,7 @@
 },
 "megaman-shooting/megaman-shooting-5.png":
 {
-	"frame": {"x":118,"y":268,"w":132,"h":140},
+	"frame": {"x":118,"y":364,"w":132,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":140},
@@ -130,7 +210,7 @@
 },
 "megaman-shooting/megaman-shooting-6.png":
 {
-	"frame": {"x":150,"y":132,"w":148,"h":132},
+	"frame": {"x":668,"y":96,"w":148,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":132},
@@ -138,7 +218,7 @@
 },
 "megaman-shooting/megaman-shooting-idle.png":
 {
-	"frame": {"x":510,"y":132,"w":116,"h":136},
+	"frame": {"x":479,"y":228,"w":116,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":116,"h":136},
@@ -146,7 +226,7 @@
 },
 "megaman-walk/chaac-walk-1.png":
 {
-	"frame": {"x":821,"y":268,"w":125,"h":150},
+	"frame": {"x":821,"y":364,"w":125,"h":150},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":150},
@@ -154,7 +234,7 @@
 },
 "megaman-walk/chaac-walk-2.png":
 {
-	"frame": {"x":220,"y":418,"w":80,"h":160},
+	"frame": {"x":220,"y":514,"w":80,"h":160},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":160},
@@ -162,7 +242,7 @@
 },
 "megaman-walk/chaac-walk-3.png":
 {
-	"frame": {"x":300,"y":418,"w":102,"h":160},
+	"frame": {"x":300,"y":514,"w":102,"h":160},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":160},
@@ -170,7 +250,7 @@
 },
 "megaman-walk/chaac-walk-4.png":
 {
-	"frame": {"x":0,"y":418,"w":132,"h":150},
+	"frame": {"x":0,"y":514,"w":132,"h":150},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":150},
@@ -178,7 +258,7 @@
 },
 "megaman-walk/chaac-walk-5.png":
 {
-	"frame": {"x":132,"y":418,"w":88,"h":155},
+	"frame": {"x":132,"y":514,"w":88,"h":155},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":155},
@@ -186,7 +266,7 @@
 },
 "megaman-walk/chaac-walk-6.png":
 {
-	"frame": {"x":402,"y":418,"w":97,"h":160},
+	"frame": {"x":402,"y":514,"w":97,"h":160},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":160},
@@ -194,7 +274,7 @@
 },
 "megaman-walk/chaac-walk-7.png":
 {
-	"frame": {"x":686,"y":268,"w":135,"h":150},
+	"frame": {"x":686,"y":364,"w":135,"h":150},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":135,"h":150},
@@ -202,7 +282,7 @@
 },
 "megaman-walk/megaman-idle.png":
 {
-	"frame": {"x":0,"y":268,"w":118,"h":140},
+	"frame": {"x":0,"y":364,"w":118,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":140},
@@ -210,7 +290,7 @@
 },
 "megaman-walk/megaman-walk-1.png":
 {
-	"frame": {"x":626,"y":132,"w":120,"h":136},
+	"frame": {"x":595,"y":228,"w":120,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":136},
@@ -218,7 +298,7 @@
 },
 "megaman-walk/megaman-walk-2.png":
 {
-	"frame": {"x":861,"y":132,"w":80,"h":136},
+	"frame": {"x":830,"y":228,"w":80,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":136},
@@ -226,7 +306,7 @@
 },
 "megaman-walk/megaman-walk-3.png":
 {
-	"frame": {"x":466,"y":268,"w":92,"h":140},
+	"frame": {"x":466,"y":364,"w":92,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":140},
@@ -234,7 +314,7 @@
 },
 "megaman-walk/megaman-walk-4.png":
 {
-	"frame": {"x":668,"y":0,"w":132,"h":132},
+	"frame": {"x":0,"y":228,"w":132,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":132},
@@ -242,7 +322,7 @@
 },
 "megaman-walk/megaman-walk-5.png":
 {
-	"frame": {"x":422,"y":132,"w":88,"h":136},
+	"frame": {"x":391,"y":228,"w":88,"h":136},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":136},
@@ -250,7 +330,7 @@
 },
 "megaman-walk/megaman-walk-6.png":
 {
-	"frame": {"x":369,"y":268,"w":97,"h":140},
+	"frame": {"x":369,"y":364,"w":97,"h":140},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":140},
@@ -258,7 +338,7 @@
 },
 "megaman-walk/megaman-walk-7.png":
 {
-	"frame": {"x":800,"y":0,"w":135,"h":132},
+	"frame": {"x":132,"y":228,"w":135,"h":132},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":135,"h":132},
@@ -269,8 +349,8 @@
 	"version": "1.0",
 	"image": "megaman.png",
 	"format": "RGBA8888",
-	"size": {"w":946,"h":610},
+	"size": {"w":966,"h":706},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:c3bd44508bf8730c2eef9ec5262ab8de:4bba82dc0e11b3256f543d8477788d2a:fd24840a6b550dffb098fa645ec31f13$"
+	"smartupdate": "$TexturePacker:SmartUpdate:233c039d034059c72472585f3c369ced:3003a590e39bc8887bc2474f6c7eb954:fd24840a6b550dffb098fa645ec31f13$"
 }
 }

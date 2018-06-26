@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>4</int>
         <key>texturePackerVersion</key>
-        <string>4.8.0</string>
+        <string>4.8.1</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -34,7 +34,7 @@
         <key>dataFormat</key>
         <string>phaser-json-hash</string>
         <key>textureFileName</key>
-        <filename>megaman.png</filename>
+        <filename>assets/megaman.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -181,6 +181,40 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">megaman-charge/charge-1.png</key>
+            <key type="filename">megaman-charge/charge-2.png</key>
+            <key type="filename">megaman-charge/charge-3.png</key>
+            <key type="filename">megaman-charge/charge-4.png</key>
+            <key type="filename">megaman-charge/charge-6.png</key>
+            <key type="filename">megaman-charge/charge-7.png</key>
+            <key type="filename">megaman-charge/charge-8.png</key>
+            <key type="filename">megaman-charge/charge-9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,24,48,48</rect>
+                <key>scale9Paddings</key>
+                <rect>24,24,48,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">megaman-charge/charge-10.png</key>
+            <key type="filename">megaman-charge/charge-5.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,24,47,48</rect>
+                <key>scale9Paddings</key>
+                <rect>24,24,47,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">megaman-dash/megaman-dash-shooting.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -594,6 +628,7 @@
             <filename>megaman-jump</filename>
             <filename>megaman-walk</filename>
             <filename>megaman-shooting</filename>
+            <filename>megaman-charge</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

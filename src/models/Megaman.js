@@ -14,9 +14,15 @@ export default class Megaman {
     this.state = {
       firstTouchTheGround: false,
       originFixed: false,
-      isDashing: false,
+      dash: {
+        isActive: false,
+        isReleased: false,
+      },
       isInitialized: false,
-      isShooting: false,
+      blaster: {
+        isActive: false,
+        isReleased: true,
+      },
     };
     this.counters = {
       dash: null,
@@ -40,8 +46,19 @@ export default class Megaman {
       'megaman',
       'megaman-init/megaman-init-1.png',
     );
+
+    this.charger = this.scene.add.sprite(
+      0,
+      0,
+      'megaman',
+      'megaman-charge/charge-1.png',
+    );
+
     this.generateAnimations();
     this.generateControls();
+
+    this.charger.setActive(false);
+    this.charger.setVisible(false);
 
     this.model.setScale(0.7);
     this.model.body.setSize(74, 160);
@@ -52,25 +69,27 @@ export default class Megaman {
   }
 
   generateAnimations() {
-    this.scene.anims.create({
+    const { anims } = this.scene;
+
+    anims.create({
       key: 'megaman-init',
       frames: [
-        ...this.scene.anims.generateFrameNames('megaman', {
+        ...anims.generateFrameNames('megaman', {
           prefix: 'megaman-init/megaman-init-',
           suffix: '.png',
           start: 1,
           end: 5,
         }),
-        { key: 'megaman', frame: 'megaman-walk/chaac-walk-1.png' },
+        { key: 'megaman', frame: 'megaman-walk/megaman-idle.png' },
       ],
       frameRate: 15,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-walk',
-      frames: this.scene.anims.generateFrameNames('megaman', {
-        prefix: 'megaman-walk/chaac-walk-',
+      frames: anims.generateFrameNames('megaman', {
+        prefix: 'megaman-walk/megaman-walk-',
         suffix: '.png',
         start: 1,
         end: 7,
@@ -79,49 +98,56 @@ export default class Megaman {
       repeat: -1,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-idle',
-      frames: [{ key: 'megaman', frame: 'megaman-walk/chaac-walk-1.png' }],
+      frames: [{ key: 'megaman', frame: 'megaman-walk/megaman-idle.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-jump-up',
       frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-jump-up-blaster',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-up-shooting.png' }],
+      frames: [
+        { key: 'megaman', frame: 'megaman-jump/megaman-jump-up-shooting.png' },
+      ],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-jump-down',
       frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-jump-down-blaster',
-      frames: [{ key: 'megaman', frame: 'megaman-jump/megaman-jump-down-shooting.png' }],
+      frames: [
+        {
+          key: 'megaman',
+          frame: 'megaman-jump/megaman-jump-down-shooting.png',
+        },
+      ],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-dash',
       frames: [{ key: 'megaman', frame: 'megaman-dash/megaman-dash.png' }],
       frameRate: 10,
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-blaster-idle',
       frames: [
         { key: 'megaman', frame: 'megaman-shooting/megaman-shooting-idle.png' },
@@ -130,13 +156,25 @@ export default class Megaman {
       repeat: 0,
     });
 
-    this.scene.anims.create({
+    anims.create({
       key: 'megaman-walk-blaster',
-      frames: this.scene.anims.generateFrameNames('megaman', {
+      frames: anims.generateFrameNames('megaman', {
         prefix: 'megaman-shooting/megaman-shooting-',
         suffix: '.png',
         start: 1,
         end: 6,
+      }),
+      frameRate: 10,
+      repeat: 0,
+    });
+
+    anims.create({
+      key: 'megaman-charge',
+      frames: anims.generateFrameNames('megaman', {
+        prefix: 'megaman-charge/charge-',
+        suffix: '.png',
+        start: 1,
+        end: 10,
       }),
       frameRate: 10,
       repeat: -1,
@@ -157,6 +195,9 @@ export default class Megaman {
     this.cursors = this.scene.input.keyboard.createCursorKeys();
     this.jumpButton = this.scene.input.keyboard.addKey(
       Phaser.Input.Keyboard.KeyCodes.SPACE,
+    );
+    this.dashButton = this.scene.input.keyboard.addKey(
+      Phaser.Input.Keyboard.KeyCodes.X,
     );
     this.blasterButton = this.scene.input.keyboard.addKey(
       Phaser.Input.Keyboard.KeyCodes.Z,
@@ -179,20 +220,8 @@ export default class Megaman {
     );
 
     this.scene.input.keyboard.on('keycombomatch', event => {
-      if (
-        (dashRight.matched || dashLeft.matched) &&
-        this._isMegamanTouchingTheGround()
-      ) {
-        this.state.isDashing = true;
-        this.counters.dash = setTimeout(() => {
-          if (this._isMegamanTouchingTheGround()) {
-            this.state.isDashing = false;
-          }
-
-          this.counters.dash = null;
-        }, 300);
-
-        this.model.anims.play('megaman-dash');
+      if (dashRight.matched || dashLeft.matched) {
+        this._setDashingState();
       }
     });
   }
@@ -209,19 +238,54 @@ export default class Megaman {
   }
 
   _setShootingState() {
-    this.state.isShooting = true;
-    if (this.counters.shooting) {
-      clearTimeout(this.counters.shooting);
+    const { blaster } = this.state;
+
+    if (blaster.isReleased) {
+      blaster.isReleased = false;
+      blaster.isActive = true;
+
+      if (this.counters.shooting) {
+        clearTimeout(this.counters.shooting);
+      }
+
+      this.counters.shooting = setTimeout(() => {
+        blaster.isActive = false;
+      }, 300);
+
+      return true;
     }
 
-    this.counters.shooting = setTimeout(() => {
-      this.state.isShooting = false;
-    }, 300);
+    return false;
+  }
+
+  _setDashingState() {
+    const { dash } = this.state;
+
+    if (this._isMegamanTouchingTheGround() && dash.isReleased) {
+      dash.isReleased = false;
+      dash.isActive = true;
+
+      this.counters.dash = setTimeout(() => {
+        if (this._isMegamanTouchingTheGround()) {
+          dash.isActive = false;
+        }
+
+        this.counters.dash = null;
+      }, 300);
+
+      this.model.anims.play('megaman-dash');
+
+      return true;
+    }
+
+    return false;
   }
 
   _megamanShouldDisplayWalkingAnimation() {
-    if (this._isMegamanTouchingTheGround() && !this.state.isDashing) {
-      if (!this.state.isShooting) {
+    const { blaster, dash } = this.state;
+
+    if (this._isMegamanTouchingTheGround() && !dash.isActive) {
+      if (!blaster.isActive) {
         this.model.anims.play('megaman-walk', true);
       } else {
         this.model.anims.play('megaman-walk-blaster', true);
@@ -234,6 +298,8 @@ export default class Megaman {
   }
 
   update() {
+    const { blaster, dash } = this.state;
+
     if (this._isMegamanTouchingTheGround() && !this.state.firstTouchTheGround) {
       this.state.firstTouchTheGround = true;
       this.model.anims.play('megaman-init');
@@ -244,19 +310,32 @@ export default class Megaman {
       return;
     }
 
-    if (this.state.isDashing) {
+    if (dash.isActive) {
       let dashVelocity = this.model.flipX ? -DASH_VELOCITY : DASH_VELOCITY;
       this.model.setVelocityX(dashVelocity);
 
       if (!this.counters.dash && this._isMegamanTouchingTheGround()) {
-        this.state.isDashing = false;
+        dash.isActive = false;
       }
     } else {
       this.model.setVelocityX(0);
     }
 
     if (this.blasterButton.isDown) {
+      // this.charger.setActive(true);
+      // this.charger.setVisible(true);
+      // this.charger.setPosition(this.model.x, this.model.y);
+      // this.charger.anims.play('megaman-charge');
+
       this._setShootingState();
+    } else {
+      blaster.isReleased = true;
+    }
+
+    if (this.dashButton.isDown) {
+      this._setDashingState();
+    } else {
+      dash.isReleased = true;
     }
 
     if (
@@ -267,7 +346,7 @@ export default class Megaman {
       this._fixOrigin();
       this.model.setVelocityY(-JUMP_VELOCITY);
 
-      if (this.state.isShooting) {
+      if (blaster.isActive) {
         this.model.anims.play('megaman-jump-up-blaster');
       } else {
         this.model.anims.play('megaman-jump-up');
@@ -278,13 +357,13 @@ export default class Megaman {
     if (this.cursors.right.isDown) {
       this.model.flipX = false;
 
-      if (!this.state.isDashing) {
+      if (!dash.isActive) {
         this.model.setVelocityX(NORMAL_VELOCITY);
       }
 
       this._megamanShouldDisplayWalkingAnimation();
 
-      if (this.state.isDashing) {
+      if (dash.isActive) {
         return;
       }
     }
@@ -292,13 +371,13 @@ export default class Megaman {
     if (this.cursors.left.isDown) {
       this.model.flipX = true;
 
-      if (!this.state.isDashing) {
+      if (!dash.isActive) {
         this.model.setVelocityX(-NORMAL_VELOCITY);
       }
 
       this._megamanShouldDisplayWalkingAnimation();
 
-      if (this.state.isDashing) {
+      if (dash.isActive) {
         return;
       }
     }
@@ -307,7 +386,7 @@ export default class Megaman {
       this.model.body.setSize(108, 140);
       this._fixOrigin();
 
-      if (this.state.isShooting) {
+      if (blaster.isActive) {
         this.model.anims.play('megaman-jump-down-blaster');
       } else {
         this.model.anims.play('megaman-jump-down');
@@ -316,7 +395,7 @@ export default class Megaman {
     }
 
     if (this.model.body.velocity.y < 0 && !this._isMegamanTouchingTheGround()) {
-      if (this.state.isShooting) {
+      if (blaster.isActive) {
         this.model.anims.play('megaman-jump-up-blaster');
       } else {
         this.model.anims.play('megaman-jump-up');
@@ -325,13 +404,13 @@ export default class Megaman {
 
     if (
       this.model.body.velocity.y === 0 &&
-      (this.model.body.velocity.x === 0 || this.state.isDashing) &&
+      (this.model.body.velocity.x === 0 || dash.isActive) &&
       this._isMegamanTouchingTheGround()
     ) {
       this.model.setVelocityX(0);
-      this.state.isDashing = false;
+      dash.isActive = false;
 
-      if (this.state.isShooting) {
+      if (this.state.blaster.isActive) {
         this.model.anims.play('megaman-blaster-idle');
         return;
       }

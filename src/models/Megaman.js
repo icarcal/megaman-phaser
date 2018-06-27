@@ -12,21 +12,25 @@ export default class Megaman {
     this.cursors = {};
     this.jumpButton = {};
     this.state = {
+      isInitialized: false,
       firstTouchTheGround: false,
       originFixed: false,
       dash: {
         isActive: false,
         isReleased: false,
       },
-      isInitialized: false,
       blaster: {
         isActive: false,
+        isReleased: true,
+      },
+      charge: {
         isReleased: true,
       },
     };
     this.counters = {
       dash: null,
       shooting: null,
+      charge: null,
     };
   }
 
@@ -281,6 +285,21 @@ export default class Megaman {
     return false;
   }
 
+  _setChargingState() {
+    const { charge } = this.state;
+
+    if (charge.isReleased) {
+      charge.isReleased = false;
+
+      this.counters.charge = setTimeout(() => {
+        this.charger.setActive(true);
+        this.charger.setVisible(true);
+        this.charger.setPosition(this.model.x - 10, this.model.y);
+        this.charger.anims.play('megaman-charge');
+      }, 500);
+    }
+  }
+
   _megamanShouldDisplayWalkingAnimation() {
     const { blaster, dash } = this.state;
 
@@ -298,7 +317,7 @@ export default class Megaman {
   }
 
   update() {
-    const { blaster, dash } = this.state;
+    const { blaster, dash, charge } = this.state;
 
     if (this._isMegamanTouchingTheGround() && !this.state.firstTouchTheGround) {
       this.state.firstTouchTheGround = true;
@@ -321,15 +340,21 @@ export default class Megaman {
       this.model.setVelocityX(0);
     }
 
-    if (this.blasterButton.isDown) {
-      // this.charger.setActive(true);
-      // this.charger.setVisible(true);
-      // this.charger.setPosition(this.model.x, this.model.y);
-      // this.charger.anims.play('megaman-charge');
+    if (!charge.isReleased) {
+      this.charger.setPosition(this.model.x + 20, this.model.y);
+    }
 
+    if (this.blasterButton.isDown) {
       this._setShootingState();
+      this._setChargingState();
     } else {
       blaster.isReleased = true;
+      charge.isReleased = true;
+      if (this.charger.active) {
+        this.charger.setActive(false);
+        this.charger.setVisible(false);
+        this._setShootingState();
+      }
     }
 
     if (this.dashButton.isDown) {
